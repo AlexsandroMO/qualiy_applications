@@ -1,0 +1,1 @@
+# qualiy_applications
