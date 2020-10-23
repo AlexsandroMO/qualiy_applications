@@ -9,7 +9,7 @@ def hello(request):
 
 
 def index(request):
-    tasks = Task.objects.all().order_by('-created_at')
+    tasks = Task.objects.all().order_by('inspection_name')
     return render(request, 'tasks/index.html', {'tasks': tasks})
 
 
@@ -30,7 +30,6 @@ def newtask(request):
             task = form.save(commit=False)
             task.save()
             return redirect('/')
-
 
     else:
         form = TaskForm()
