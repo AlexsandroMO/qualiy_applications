@@ -17,14 +17,11 @@
     </ul>
 </table>
 
-
-
 	<div id="divConteudo">
 	<table id="tabela">
-
         {% for task in tasks %}
 		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	I08.pdf" target="_blank" id="alinha-a">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
+		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	I08.pdf" target="_blank" id="alinha-a">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></td>
         </tr>
         {% endfor %}
 	</table>
