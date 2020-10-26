@@ -210,6 +210,7 @@ input{
   }
   
 #tabela{
+	float: right;
 	position: relative;
 	left: 40px;
 	padding: 3px 0;
