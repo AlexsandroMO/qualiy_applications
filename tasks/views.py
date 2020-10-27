@@ -24,14 +24,14 @@ def taskview(request, id):
 
 def newtask(request):
     if request.method == 'POST':
-        form = TaskForm()
-
+        form = TaskForm(request.POST)
+        
         if form.is_valid():
             task = form.save(commit=False)
+            task.done = 'doing'
+            task.user = request.user
             task.save()
             return redirect('/')
-
     else:
         form = TaskForm()
-        return render(request, 'tasks/add-task.html', {'form':form})
-
+        return render(request, 'tasks/add-task.html', {'form': form})

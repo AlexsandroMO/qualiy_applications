@@ -10,6 +10,14 @@
 /* } */
 
 
+
+div.container {
+	height: 100%;
+	background: -webkit-linear-gradient(top, #088fad 20%, #00d5ff 100%);
+}
+
+
+
 /*#test{position:absolute;top:100;}*/
 #header-div{
 	border: 0;
@@ -205,51 +213,10 @@ input{
 	color: white;
 	display:block;
 	position: absolute;
-	top: -180px;
+	top: -140px;
 	left: 580px;
   }
   
-#tabela{
-	float: right;
-	position: relative;
-	left: 40px;
-	padding: 3px 0;
-    border:1px #696969 solid;
-	
-}
-
-#alinha-a{
-    position: relative; /* Para que a imagem não saia fora do link */
-    display: block;
-    width: 180px;
-    padding: 5px 0;
-    border:1px #1C1C1C solid;
-    background-color: #4F4F4F;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-#alinha-b{
-    position: relative; /* Para que a imagem não saia fora do link */
-    display: block;
-    width: 180px;
-    padding: 5px 0;
-    border:1px #1C1C1C solid;
-    background-color: #808080;
-    text-decoration: none;
-    color: #ffffff;
-}
- 
-#alinha-c{
-    position: relative; /* Para que a imagem não saia fora do link */
-    display: block;
-    width: 150px;
-    padding: 3px 0;
-    border:1px #2F4F4F solid;
-    background-color: #A9A9A9;
-    text-decoration: none;
-    color: #000000;
-}
 
 .fade{
     opacity:1;
@@ -258,6 +225,131 @@ input{
 .fade:hover{
     opacity:0.5;
 }
+
+
+
+/*Tabelas*/
+/* table, td, th {
+	border: solid 1px;
+	border-collapse: collapse;
+	padding: 3px 0;
+	overflow: auto;
+}
+thead, tbody {
+	display: block;
+	width: 1350px;
+	width: auto;
+	text-align: center;
+}
+tbody {
+	height: 480px;
+	overflow-y: auto;
+	text-align: center;
+} */
+
+
+
+/*Tabelas alinhamentos*/
+#tabela{
+	position: relative;
+	left: 40px;
+
+}
+
+
+#alinha-a{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 80px;
+    background-color: #A9A9A9;
+    color: #ffffff;
+}
+
+#alinha-b{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 150px;
+    background-color: #A9A9A9;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#alinha-c{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 800px;
+	background-color: #A9A9A9;
+    text-decoration: none;
+    color: #000000;
+}
+
+#alinha-d{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 250px;
+	background-color: #A9A9A9;
+    text-decoration: none;
+    color: #000000;
+}
+
+
+/* https://pt.stackoverflow.com/questions/175521/alinhamento-de-div-lado-a-lado */
+
+#alinha-tr-temp{
+	width: 12%;
+	font-size: 1.3vw;
+	display: inline-block;
+	text-align: center;
+	min-width: 15vw;
+
+
+		/* width: 20%;
+	height: 11%; */
+	/* font-size: 1.2vw;
+		float: right;
+
+	display: inline-block;
+	text-align: center;
+	min-width:40vw; */
+	
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+  }
+
+
+#alinha-aa{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 80px;
+
+
+}
+
+#alinha-bb{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 150px;
+
+}
+
+#alinha-cc{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 800px;
+
+}
+
+#alinha-dd{
+    position: relative; /* Para que a imagem não saia fora do link */
+    display: block;
+    width: 250px;
+
+}
+
 
 
 

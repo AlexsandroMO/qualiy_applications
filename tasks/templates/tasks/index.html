@@ -2,256 +2,54 @@
 {% block title %}Página Inicial Qualidade{% endblock %}
 {% block content %}
 
+<div class="w3-container">
 
-	<h2>Modelo de Templates - Visualização: <a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Material\Responsavel Inspeção.pdf" target="_blank">Responsabilidade das Inspeções</a></h2>
-	<p>(Onde houver <font color="#DAA520"><b>### xx ###</b></font> é de preenchemento automático do EPM). Tudo em <font color="red"><b>Vermelho</b></font> é de preenchimento manual</p>
-		
-
-	<div id="divConteudo">
-	<table id="tabela">
-		<section id="alinha-table-temp">
-        {% for task in tasks %}
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="{{task.link_path_pdf}}" target="_blank" id="alinha-a">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
-        </tr>
-		{% endfor %}
-		</section>
+<h2>Responsive Table</h2>
+	<div class="w3-responsive">
+	<table class="w3-table-all">
+		{% for task in tasks %}
+	<tr id="alinha-tr-temp">
+	  <td><div id="passar_mouse"><a href="task/{{task.id}}">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
+	</tr>
+	{% endfor %}
 	</table>
 	</div>
 
-    <br>
+<br>
+<br>
+<table class="w3-table w3-bordered">
+	{% for task in tasks %}
+	<tr id="alinha-tr-temp">
+	  <th><div id="passar_mouse"><a href="task/{{task.id}}">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></th>
+	</tr>
+	{% endfor %}
+	
+  </table>
+</div>
+<br>
+<br>
 
 <main>
 	<section>
 	<h2>Modelo de Templates - Visualização: <a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Material\Responsavel Inspeção.pdf" target="_blank">Responsabilidade das Inspeções</a></h2>
-	<p>(Onde houver <font color="#DAA520"><b>### xx ###</b></font> é de preenchemento automático do EPM). Tudo em <font color="red"><b>Vermelho</b></font> é de preenchimento manual</p>
-	<div id="divConteudo">
-	<table id="tabela">
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A02	.pdf" target="_blank" id="alinha-a">	Template A02	</a><div id="mostrar">	<b>Inspeção de montagem e de compressão dos discos de amortecedor</b></div></div></td>
-		<td  align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A03	.pdf" target="_blank" id="alinha-a">	Template A03	</a><div id="mostrar">	<b>Inspeção de montagem e de compressão dos discos de amortecedor</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A04	.pdf" target="_blank" id="alinha-a">	Template A04	</a><div id="mostrar">	<b>Inspeção de frequências de suspensão</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A06	.pdf" target="_blank" id="alinha-a">	Template A06	</a><div id="mostrar">	<b>Inspeção das regras de transporte e manuseio de equipamentos que deve atender a critérios de acústica</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A07	.pdf" target="_blank" id="alinha-a">	Template A07	</a><div id="mostrar">	<b>Inspeção de Rastreabilidade</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B06_01.pdf" target="_blank" id="alinha-a">	Template B06_01	</a><div id="mostrar">	<b>Inspeção da conformidade do material de aparafusamento do casco sob pressão</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B07	.pdf" target="_blank" id="alinha-a">	Template B07	</a><div id="mostrar">	<b>Inspeção de Rastreabilidade</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-01	.pdf" target="_blank" id="alinha-a">	Template B11-01	</a><div id="mostrar">	<b>Inspeção de fixação do mastro na armação</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-02	.pdf" target="_blank" id="alinha-a">	Template B11-02	</a><div id="mostrar">	<b>Inspeção de montagem do aríete de operação do obturador de ar</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-03	.pdf" target="_blank" id="alinha-a">	Template B11-03	</a><div id="mostrar">	<b>Inspeção de montagem da válvula de cúpula no obturador de ar</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-04	.pdf" target="_blank" id="alinha-a">	Template B11-04	</a><div id="mostrar">	<b>Inspeção de fixação do casco do periscópio de ataque na armação (Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-05	.pdf" target="_blank" id="alinha-a">	Template B11-05	</a><div id="mostrar">	<b>Inspeção de montagem do porta-ferramentas equipado na linha do eixo(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-06	.pdf" target="_blank" id="alinha-a">	Template B11-06	</a><div id="mostrar">	<b>Inspeção de montagem da porta interna SO dos TLTs(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-07	.pdf" target="_blank" id="alinha-a">	Template B11-07	</a><div id="mostrar">	<b>Inspeção de montagem da linha de eixo da braçola da escotilha(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-08	.pdf" target="_blank" id="alinha-a">	Template B11-08	</a><div id="mostrar">	<b>Inspeção de montagem do selo inflável braçola da escotilha(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-09	.pdf" target="_blank" id="alinha-a">	Template B11-09	</a><div id="mostrar">	<b>Inspeção de montagem da válvula de drenagem do ejetor de lixo(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-10	.pdf" target="_blank" id="alinha-a">	Template B11-10	</a><div id="mostrar">	<b>Inspeção de montagem da válvula de drenagem do ejetor de lixo(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-11	.pdf" target="_blank" id="alinha-a">	Template B11-11	</a><div id="mostrar">	<b>Inspeção de montagem da válvula de isolamento do ejetor de lixo(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-13	.pdf" target="_blank" id="alinha-a">	Template B11-13	</a><div id="mostrar">	<b>Inspeção de montagem de passagens hidráulicas no corpo dos TLTs(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-14	.pdf" target="_blank" id="alinha-a">	Template B11-14	</a><div id="mostrar">	<b>Inspeção de montagem da válvula de drenagem ND50 no TLT(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-15	.pdf" target="_blank" id="alinha-a">	Template B11-15	</a><div id="mostrar">	<b>Inspeção de montagem do cotovelo F / D no TLT(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-16	.pdf" target="_blank" id="alinha-a">	Template B11-16	</a><div id="mostrar">	<b>Inspeção de montagem de bujões no corpo dos TLTs(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-17	.pdf" target="_blank" id="alinha-a">	Template B11-17	</a><div id="mostrar">	<b>Inspeção de montagem do dispositivo do pino de travamento(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-18	.pdf" target="_blank" id="alinha-a">	Template B11-18	</a><div id="mostrar">	<b>Inspeção de montagem da porta interna PR dos TLTs(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-19	.pdf" target="_blank" id="alinha-a">	Template B11-19	</a><div id="mostrar">	<b>Inspeção de montagem de peças móveis(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-20x	.pdf" target="_blank" id="alinha-a">	Template B11-20	</a><div id="mostrar">	<b>Inspeção de montagem de macacos de operação de válvulas de escape(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-21	.pdf" target="_blank" id="alinha-a">	Template B11-21	</a><div id="mostrar">	<b>Inspeção de montagem do eixo do cabrestante na parte móvel(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-22	.pdf" target="_blank" id="alinha-a">	Template B11-22	</a><div id="mostrar">	<b>Inspeção de montagem da parte móvel da antena de arame(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-23	.pdf" target="_blank" id="alinha-a">	Template B11-23	</a><div id="mostrar">	<b>Inspeção de montagem da válvula de retenção de esfera na parte móvel da antena de arame (Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-24	.pdf" target="_blank" id="alinha-a">	Template B11-24	</a><div id="mostrar">	<b>Inspeção de montagem da porta externa do TLTs(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-25	.pdf" target="_blank" id="alinha-a">	Template B11-25	</a><div id="mostrar">	<b>Inspeção de montagem da escotilha de resgate inferior(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-26	.pdf" target="_blank" id="alinha-a">	Template B11-26	</a><div id="mostrar">	<b>Inspeção de montagem do conjunto de vedação inflável e o-ring da antena de arame(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-27	.pdf" target="_blank" id="alinha-a">	Template B11-27	</a><div id="mostrar">	<b>Inspeção para remontar parte traseira do tanque tanque de reatores NVR DV(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-28	.pdf" target="_blank" id="alinha-a">	Template B11-28	</a><div id="mostrar">	<b>Inspeção de montagem NRV com cotovelo direcionável HE(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B13 - RD-06810.pdf" target="_blank" id="alinha-a">	Template B13_RD-06810	</a><div id="mostrar">	<b>Inspeção das partes móveis equipadas com sobremoldagens(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B23	.pdf" target="_blank" id="alinha-a">	Template B23	</a><div id="mostrar">	<b>Inspeção das peças móveis com sobremoldagens(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B25	.pdf" target="_blank" id="alinha-a">	Template B25	</a><div id="mostrar">	<b>Inspeção de cabos com sobremoldagem do tipo Bescond(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\D49.pdf" target="_blank" id="alinha-a">	Template D49	</a><div id="mostrar">	<b>Inspeção de processo de calibração de resina(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D85	.pdf" target="_blank" id="alinha-a">	Template D85	</a><div id="mostrar">	<b>Inspeção de montagem de equipamento mecânico a bordo - Capa(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D85_1	.pdf" target="_blank" id="alinha-a">	Template D85_1	</a><div id="mostrar">	<b>Inspeção de montagem de equipamento mecânico a bordo - Controle de montagem por auto-inspeção(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D85_2	.pdf" target="_blank" id="alinha-a">	Template D85_2	</a><div id="mostrar">	<b>Inspeção de montagem de equipamento mecânico a bordo - Inspeção de montagem por controle de qualidade(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95-03	.pdf" target="_blank" id="alinha-a">	Template D95-03	</a><div id="mostrar">	<b>Inspeção de montagem das antenas nas inspeções das aletas da ponte - <br>Verifique se o material de fixação do suporte está travado e apertado(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_07	.pdf" target="_blank" id="alinha-a">	Template D95_07	</a><div id="mostrar">	<b>Inspeção de montagem das antenas nas inspeções das aletas da ponte - Verificação da elevação / <br>redução correta do mastro(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_08	.pdf" target="_blank" id="alinha-a">	Template D95_08	</a><div id="mostrar"><b>Inspeção de montagem das antenas nas inspeções das aletas da ponte - <b>Verificação contatores disparam corretamente(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_12	.pdf" target="_blank" id="alinha-a">	Template D95_12	</a><div id="mostrar">	<b>Inspeção de montagem das antenas nas inspeções das aletas da ponte - <br>Verifique se os contatores disparam corretamente depois de configurar o trabalho do subsistema DT(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_16	.pdf" target="_blank" id="alinha-a">	Template D95_16	</a><div id="mostrar">	<b>Inspeção de montagem das antenas nas inspeções das aletas da ponte - <br>Verificação do alinhamento correto dos trilhos(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_38	.pdf" target="_blank" id="alinha-a">	Template D95_38	</a><div id="mostrar">	<b>Inspeção de montagem das antenas nas inspeções das aletas da ponte - <br>Verifique se o material de fixação do suporte está travado e apertado(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_39	.pdf" target="_blank" id="alinha-a">	Template D95_39	</a><div id="mostrar">	<b>Inspeção de montagem das antenas nas inspeções das aletas da ponte - <br>Verifique a posição dos detectores de periscópio de ataque(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_40	.pdf" target="_blank" id="alinha-a">	Template D95_40	</a><div id="mostrar">	<b>Inspeção de montagem das antenas nas inspeções das aletas da ponte - <br>Verifique se os detectores do periscópio de ataque disparam corretamente (Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E01	.pdf" target="_blank" id="alinha-a">	Template E01	</a><div id="mostrar">	<b>Inspeção de montagem e conexão dos dispositivos elétricos(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E02	.pdf" target="_blank" id="alinha-a">	Template E02	</a><div id="mostrar">	<b>Inspeção do roteamento de chicotes de cabos(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E05	.pdf" target="_blank" id="alinha-a">	Template E05	</a><div id="mostrar">	<b>Inspeção de aterramento das estruturas não soldadas(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E07	.pdf" target="_blank" id="alinha-a">	Template E07	</a><div id="mostrar">	<b>Inspeção de continuidade e isolamento dos cabos, com tensão de trânsito ≤ 60V(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E08	.pdf" target="_blank" id="alinha-a">	Template E08	</a><div id="mostrar">	<b>Inspeção das correntes / sensores de medição(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E09	.pdf" target="_blank" id="alinha-a">	Template E09	</a><div id="mostrar">	<b>Inspeção de direção(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E10.pdf" target="_blank" id="alinha-a">	Template E10	</a><div id="mostrar">	<b>Inspeção de redes BE e BT(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E11.pdf" target="_blank" id="alinha-a">	Template E11	</a><div id="mostrar">	<b>Inspeção de continuidade e isolamento dos alimentadores de saída do painel de distribuição(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E12.pdf" target="_blank" id="alinha-a">	Template E12	</a><div id="mostrar">	<b>Inspeção de emenda de cabos(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E14	.pdf" target="_blank" id="alinha-a">	Template E14	</a><div id="mostrar">	<b>Inspeção de aterramento do cradle(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E16	.pdf" target="_blank" id="alinha-a">	Template E16	</a><div id="mostrar">	<b>Inspeção de continuidade e isolamento(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E21	.pdf" target="_blank" id="alinha-a">	Template E21	</a><div id="mostrar">	<b>Inspeção de conexões de fibra óptica(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E23	.pdf" target="_blank" id="alinha-a">	Template E23	</a><div id="mostrar">	<b>Inspeção de comprimento de cabos(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E24	.pdf" target="_blank" id="alinha-a">	Template E24	</a><div id="mostrar">	<b>Inspeção de cabos das redes Ethernet(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	F06	.pdf" target="_blank" id="alinha-a">	Template F06	</a><div id="mostrar">	<b>Inspeções visuais do revestimento interno de válvulas de água do mar e seções pintadas(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	F07	.pdf" target="_blank" id="alinha-a">	Template F07	</a><div id="mostrar">	<b>Montagem de Instalações (Notificado pelo COS ou STW de integração COS - AIS)(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Material_MD\Anexo_E - Preenchimento F07.pdf" target="_blank" id="alinha-a">	Template F07_Especial	</a><div id="mostrar">	<b>Montagem de Instalações (Notificado pelo COS ou STW de integração COS - AIS)(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	F07	.pdf" target="_blank" id="alinha-a">	Template F07	</a><div id="mostrar">	<b>Montagem de Instalações (Notificado pelo COS ou STW de integração COS - AIS)(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	I12	.pdf" target="_blank" id="alinha-a">	Template I12	</a><div id="mostrar">	<b>Inspeção de Isolamento e Disposições - Colocação de esteiras em caixas de lastro de chumbo(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	L01	.pdf" target="_blank" id="alinha-a">	Template L01	</a><div id="mostrar">	<b>Inspeção de pesagem de estruturas e equipamentos não resistentes à pressão(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	M09	.pdf" target="_blank" id="alinha-a">	Template M09	</a><div id="mostrar">	<b>Inspeção para montagem de equipamentos(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates/MS01.pdf" target="_blank" id="alinha-a">	Template MS01	</a><div id="mostrar">	<b>Inspeção de calços flexíveis em auxiliares elétricos - Capa(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS01_1	.pdf" target="_blank" id="alinha-a">	Template MS01_1	</a><div id="mostrar">	<b>Inspeção de calços flexíveis em auxiliares elétricos - Compressão e montagem em conformidade(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS01_2	.pdf" target="_blank" id="alinha-a">	Template MS01_2	</a><div id="mostrar">	<b>Inspeção de calços flexíveis em auxiliares elétricos -Torque de aperto dos parafusos de retenção(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS02	.pdf" target="_blank" id="alinha-a">	Template MS02	</a><div id="mostrar">	<b>Inspeção de discos de amortecedor  e montagem desacoplada de equipamentos - Capa(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS02_1	.pdf" target="_blank" id="alinha-a">	Template MS02_1	</a><div id="mostrar">	<b>Inspeção de discos de amortecedor  e montagem desacoplada de equipamentos - Torque de aperto do parafusos de <br>retenção(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS02_2	.pdf" target="_blank" id="alinha-a">	Template MS02_2	</a><div id="mostrar">	<b>Inspeção de discos de amortecedor  e montagem desacoplada de equipamentos - Inspeção de compressão e conformidade <br>da montagem(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	P01	.pdf" target="_blank" id="alinha-a">	Template P01	</a><div id="mostrar">	<b>Inspeção de preparação de chapas(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	P02	.pdf" target="_blank" id="alinha-a">	Template P02	</a><div id="mostrar">	<b>Inspeção de ânodos de sacrifício(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	X02	.pdf" target="_blank" id="alinha-a">	Template X02	</a><div id="mostrar">	<b>Inspeções de rastreabilidade - Verificação de rastreabilidade de cilindros e acumuladores HP(Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	X03	.pdf" target="_blank" id="alinha-a">	Template X03	</a><div id="mostrar">	<b>Inspeções de rastreabilidade - Equipamento importante para verificação de rastreabilidade <br>de segurança de mergulho (EISP)(Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-		<tr>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\C24M.pdf" target="_blank" id="alinha-a">Template C24M</a><div id="mostrar">	<b>Inspeções Visual de Solda</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\M02.pdf" target="_blank" id="alinha-a">Template M02</a><div id="mostrar">	<b>Inspeções Circuito de Fluido</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	G02.pdf" target="_blank" id="alinha-a">	Template G02	</a><div id="mostrar">	<b>Inspeção Dimensional Estrutural (Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	G06.pdf" target="_blank" id="alinha-a">	Template G06	</a><div id="mostrar">	<b>Inspeção Dimensional Estrutural (Conforme - SMB-200010)</b></div></div></td>
-		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	I08.pdf" target="_blank" id="alinha-a">	Template I08	</a><div id="mostrar">	<b>Inspeção Dimensional Estrutural (Conforme - SMB-200010)</b></div></div></td>
-		</tr>
-	</table>
+	<!-- <p>(Onde houver <font color="#DAA520"><b>### xx ###</b></font> é de preenchemento automático do EPM). Tudo em <font color="red"><b>Vermelho</b></font> é de preenchimento manual</p> -->
+
+	<div >
+		<table>
+			{% for task in tasks %}
+			<tr  id="alinha-tr-temp">
+				<td><div id="passar_mouse"><a href="task/{{task.id}}">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
+			</tr>
+			{% endfor %}
+		</table>
 	</div>
 
-	<br>
-	<h2>Modelo de Templates - Downloads</h2>
-		
-	<div id="divConteudo">
-	<table id="tabela">
-		<tr>
-
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A02	.xlsx" target="_blank" id="alinha-b">	Template A02	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A03	.xlsx" target="_blank" id="alinha-b">	Template A03	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A04	.xlsx" target="_blank" id="alinha-b">	Template A04	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A06	.xlsx" target="_blank" id="alinha-b">	Template A06	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	A07	.xlsx" target="_blank" id="alinha-b">	Template A07	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B06_01	.xlsx" target="_blank" id="alinha-b">	Template B06_01	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B07	.xlsx" target="_blank" id="alinha-b">	Template B07	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-01	.xlsx" target="_blank" id="alinha-b">	Template B11-01	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-02	.xlsx" target="_blank" id="alinha-b">	Template B11-02	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-03	.xlsx" target="_blank" id="alinha-b">	Template B11-03	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-04	.xlsx" target="_blank" id="alinha-b">	Template B11-04	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-05	.xlsx" target="_blank" id="alinha-b">	Template B11-05	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-06	.xlsx" target="_blank" id="alinha-b">	Template B11-06	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-07	.xlsx" target="_blank" id="alinha-b">	Template B11-07	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-08	.xlsx" target="_blank" id="alinha-b">	Template B11-08	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-09	.xlsx" target="_blank" id="alinha-b">	Template B11-09	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-10	.xlsx" target="_blank" id="alinha-b">	Template B11-10	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-11	.xlsx" target="_blank" id="alinha-b">	Template B11-11	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-13	.xlsx" target="_blank" id="alinha-b">	Template B11-13	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-14	.xlsx" target="_blank" id="alinha-b">	Template B11-14	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-15	.xlsx" target="_blank" id="alinha-b">	Template B11-15	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-16	.xlsx" target="_blank" id="alinha-b">	Template B11-16	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-17	.xlsx" target="_blank" id="alinha-b">	Template B11-17	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-18	.xlsx" target="_blank" id="alinha-b">	Template B11-18	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-19	.xlsx" target="_blank" id="alinha-b">	Template B11-19	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-20	.xlsx" target="_blank" id="alinha-b">	Template B11-20	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-21	.xlsx" target="_blank" id="alinha-b">	Template B11-21	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-22	.xlsx" target="_blank" id="alinha-b">	Template B11-22	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-23	.xlsx" target="_blank" id="alinha-b">	Template B11-23	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-24	.xlsx" target="_blank" id="alinha-b">	Template B11-24	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-25	.xlsx" target="_blank" id="alinha-b">	Template B11-25	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-26	.xlsx" target="_blank" id="alinha-b">	Template B11-26	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-27	.xlsx" target="_blank" id="alinha-b">	Template B11-27	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B11-28	.xlsx" target="_blank" id="alinha-b">	Template B11-28	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B13	.xlsx" target="_blank" id="alinha-b">	Template B13	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B23	.xlsx" target="_blank" id="alinha-b">	Template B23	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	B25	.xlsx" target="_blank" id="alinha-b">	Template B25	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D49	.xlsx" target="_blank" id="alinha-b">	Template D49	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D85	.xlsx" target="_blank" id="alinha-b">	Template D85	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D85_1	.xlsx" target="_blank" id="alinha-b">	Template D85_1	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D85_2	.xlsx" target="_blank" id="alinha-b">	Template D85_2	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95-03	.xlsx" target="_blank" id="alinha-b">	Template D95-03	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_07	.xlsx" target="_blank" id="alinha-b">	Template D95_07	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_08	.xlsx" target="_blank" id="alinha-b">	Template D95_08	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_12	.xlsx" target="_blank" id="alinha-b">	Template D95_12	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_16	.xlsx" target="_blank" id="alinha-b">	Template D95_16	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_38	.xlsx" target="_blank" id="alinha-b">	Template D95_38	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_39	.xlsx" target="_blank" id="alinha-b">	Template D95_39	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	D95_40	.xlsx" target="_blank" id="alinha-b">	Template D95_40	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E01	.xlsx" target="_blank" id="alinha-b">	Template E01	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E02	.xlsx" target="_blank" id="alinha-b">	Template E02	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E05	.xlsx" target="_blank" id="alinha-b">	Template E05	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E07	.xlsx" target="_blank" id="alinha-b">	Template E07	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E08	.xlsx" target="_blank" id="alinha-b">	Template E08	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E09	.xlsx" target="_blank" id="alinha-b">	Template E09	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E10	.xlsx" target="_blank" id="alinha-b">	Template E10	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E11	.xlsx" target="_blank" id="alinha-b">	Template E11	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E12	.xlsx" target="_blank" id="alinha-b">	Template E12	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E14	.xlsx" target="_blank" id="alinha-b">	Template E14	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E16	.xlsx" target="_blank" id="alinha-b">	Template E16	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E21	.xlsx" target="_blank" id="alinha-b">	Template E21	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E23	.xlsx" target="_blank" id="alinha-b">	Template E23	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	E24	.xlsx" target="_blank" id="alinha-b">	Template E24	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	F06	.xlsx" target="_blank" id="alinha-b">	Template F06	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	F07	.xlsx" target="_blank" id="alinha-b">	Template F07	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	I12	.xlsx" target="_blank" id="alinha-b">	Template I12	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	L01	.xlsx" target="_blank" id="alinha-b">	Template L01	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	M09	.xlsx" target="_blank" id="alinha-b">	Template M09	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS01	.xlsx" target="_blank" id="alinha-b">	Template MS01	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS01_1	.xlsx" target="_blank" id="alinha-b">	Template MS01_1	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS01_2	.xlsx" target="_blank" id="alinha-b">	Template MS01_2	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS02	.xlsx" target="_blank" id="alinha-b">	Template MS02	</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS02_1	.xlsx" target="_blank" id="alinha-b">	Template MS02_1	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	MS02_2	.xlsx" target="_blank" id="alinha-b">	Template MS02_2	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	P01	.xlsx" target="_blank" id="alinha-b">	Template P01	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	P02	.xlsx" target="_blank" id="alinha-b">	Template P02	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	X02	.xlsx" target="_blank" id="alinha-b">	Template X02	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	X03	.xlsx" target="_blank" id="alinha-b">	Template X03	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\C24M.xlsx" target="_blank" id="alinha-b">Template C24M			</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\M02.xlsx" target="_blank" id="alinha-b">Template M02		</a></td>
-		</tr>
-		<tr>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\G02.xls" target="_blank" id="alinha-b">	Template G02	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\G06.xls" target="_blank" id="alinha-b">	Template G06	</a></td>
-		<td>	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\I08.xlsx" target="_blank" id="alinha-b">	Template I08	</a></td>
-		</tr>	
-	</table>
-	</div>
-	</section>
+</section>
 </main>
+
+<br>
+
+
 
 {% endblock %}
 

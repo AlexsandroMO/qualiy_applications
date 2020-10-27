@@ -2,17 +2,31 @@
 {% block title %}{{ name }}{% endblock %}
 {% block content %}
 
-<table id="tabela">
-    <div class="col-2 add-div"></div>
-    <ul class="task-list">
-       
-        <spam>{{task.inspection_name}}</spam>
-        <spam><a href="{{task.link_path_pdf}}" target="_blank">{{task.link_path_pdf}}</a></spam>
-        
-        <br>
-        <!-- <spam><i class="fas fa-edit"></i></spam> -->
-       
-    </ul>
-</table>
+<div class="row">
+
+    <h2>{{task.inspection_name}}</h2>
+                        
+        <div class="w3-table">
+        <table class="w3-table w3-bordered" >
+            <thead>
+                <tr>
+                    <th><div id="alinha-aa">ID</div></th>
+                    <th><div id="alinha-bb">NOME DA INSPEÇÂO</div></th>
+                    <th><div id="alinha-cc">Descrição</div></th>
+                    <th><div id="alinha-dd">Data Criação</div></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><div id="alinha-a">{{task.id}}</div></td>
+                    <td><div id="alinha-b"><a href="{{task.link_path_pdf}}" target="_blank">{{task.inspection_name}}</a></div></td>
+                    <td><div id="alinha-c">{{task.description}}</div></td>
+                    <td><div id="alinha-d">{{task.update_at}}</div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br>
 
 {% endblock %}
