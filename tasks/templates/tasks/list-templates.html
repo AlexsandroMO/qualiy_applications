@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Visualizando Templates{% endblock %}
+{% block content %}
+
+
+<h2>Templates por Tipo</h2>
+
+<table class="w3-table-all">
+	<tbody>
+	{% for task in tasks %}
+	<tr id="alinha-tr-temp"><!-- id="alinha-tr-temp" -->
+		<td><div id="passar_mouse"><a href="task/{{task.id}}">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
+	</tr>
+	{% endfor %}
+</tbody>
+</table>
+
+{% endblock %}
+
+
+
+
+<!-- <table id="tabela">
+    <div class="col-2 add-div"></div>
+    <ul class="task-list">
+        {% for task in tasks %}
+        <spam>{{task.id}}</spam>
+        <spam>{{task.inspection_name}}</spam>
+        <spam><a href="{{task.link_path_pdf}}" target="_blank">{{task.link_path_pdf}}</a></spam>
+        
+        <br>
+         <spam><i class="fas fa-edit"></i></spam>
+        {% endfor %}
+    </ul>
+</table> -->

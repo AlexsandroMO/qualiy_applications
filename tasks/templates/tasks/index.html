@@ -2,54 +2,30 @@
 {% block title %}Página Inicial Qualidade{% endblock %}
 {% block content %}
 
-<div class="w3-container">
 
-<h2>Responsive Table</h2>
-	<div class="w3-responsive">
-	<table class="w3-table-all">
-		{% for task in tasks %}
-	<tr id="alinha-tr-temp">
-	  <td><div id="passar_mouse"><a href="task/{{task.id}}">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
-	</tr>
-	{% endfor %}
-	</table>
-	</div>
+<h2>Templates por Tipo <a href="newtask/"><i class="fas fa-plus"></i></a></h2>
 
-<br>
-<br>
-<table class="w3-table w3-bordered">
+
+
+<table class="w3-table-all">
+	<thead>
+		<tr>
+			<th id="alinha-text">Inspeção</div></th>
+			<th id="alinha-text3">Edição</div></th>
+			<th id="alinha-text3">Exclusão</div></th>
+		</tr>
+	</thead>
+	<tbody>
 	{% for task in tasks %}
-	<tr id="alinha-tr-temp">
-	  <th><div id="passar_mouse"><a href="task/{{task.id}}">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></th>
+	<tr><!-- id="alinha-tr-temp" -->
+		<td id="alinha-text"><div id="passar_mouse"><a href="task/{{task.id}}">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
+		<td id="alinha-text3"><a href="edit/{{task.id}}"><i class="fas fa-edit"></i></a></td>
+		
+		<td id="alinha-text3"><a href="task/{{task.id}}"><i class="fas fa-trash"></i></a></td>
 	</tr>
 	{% endfor %}
-	
-  </table>
-</div>
-<br>
-<br>
-
-<main>
-	<section>
-	<h2>Modelo de Templates - Visualização: <a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Material\Responsavel Inspeção.pdf" target="_blank">Responsabilidade das Inspeções</a></h2>
-	<!-- <p>(Onde houver <font color="#DAA520"><b>### xx ###</b></font> é de preenchemento automático do EPM). Tudo em <font color="red"><b>Vermelho</b></font> é de preenchimento manual</p> -->
-
-	<div >
-		<table>
-			{% for task in tasks %}
-			<tr  id="alinha-tr-temp">
-				<td><div id="passar_mouse"><a href="task/{{task.id}}">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
-			</tr>
-			{% endfor %}
-		</table>
-	</div>
-
-</section>
-</main>
-
-<br>
-
-
+	</tbody>
+</table>
 
 {% endblock %}
 
