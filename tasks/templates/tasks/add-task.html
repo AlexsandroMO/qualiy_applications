@@ -1,6 +1,5 @@
-
-
 {% extends 'base.html' %}
+
 {% block title %}Adicionar Templates{% endblock %}
 {% block content %}
 
@@ -8,18 +7,11 @@
     <h1>Adcionar</h1>
     <form method="POST">
         {% csrf_token %}
-        {{form.as_p}}
+        {{ form.as_p}}
         <input type="submit" class="btn btn-sucess" value="Criar Tarefa">
     </form>
 
 </div>
-
-<a href="">
-    <div class="col-2 add-div">
-        <i class="fas fa-plus"></i> Adicionar item
-    </div>
-</a>
-
 
 
 {% endblock %}

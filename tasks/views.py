@@ -1,16 +1,28 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
 from django.http import HttpResponse
 from .forms import TaskForm
-
+from django.contrib import messages
 from .models import Task
 
 def hello(request):
     return HttpResponse('hello!')
 
 
-def index(request):
-    tasks = Task.objects.all().order_by('inspection_name')
-    return render(request, 'tasks/index.html', {'tasks': tasks})
+def template_list(request):
+
+    search = request.GET.get('search')
+
+    if search:
+        tasks = Task.objects.filter(inspection_name__icontains=search)
+
+    else:
+        task_list = Task.objects.all().order_by('inspection_name')
+        paginator = Paginator(task_list, 12)
+        page = request.GET.get('page')
+        tasks = paginator.get_page(page)
+
+    return render(request, 'tasks/template-list.html', {'tasks': tasks})
 
 
 def entryvalue(request, name):
@@ -51,3 +63,13 @@ def editview(request, id):
 
     else:
         return render(request, 'tasks/edit-task.html', {'form': form, 'task': task})
+
+
+def deleteview(request, id):
+    task = get_object_or_404(Task, pk=id)
+    task.delete()
+
+    messages.info(request, 'Template Deletado com Sucesso!')
+
+    return redirect('/')
+

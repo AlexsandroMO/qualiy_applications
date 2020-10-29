@@ -227,6 +227,14 @@ input{
 
 
 
+
+.fas.fa-trash{
+	cursor: pointer;
+
+}
+
+
+
 /*Tabelas*/
 table, th, td {
 	border: 1px solid black;
@@ -379,8 +387,55 @@ footer p {
     top: 40%;
 }
 
-/*--------------------------------------------------------*/
 
+/* Messages*/
+
+ul.messages{
+	padding: 0;
+}
+
+ul.messages li{
+	list-style: none;
+}
+
+
+/* Paginação */
+.paginator{
+	margin-bottom: 20px;
+}
+
+.step-links{
+	padding: 20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.step-links .current{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+
+/* Localizar */
+
+
+#serach-search{
+	position: absolute;
+	left: -10px
+
+}
+
+#search-btn{
+	position: relative;
+	left: -130px
+
+}
+
+
+
+/*--------------------------------------------------------*/
 /* Animations */
 
 .example1 {
@@ -408,6 +463,12 @@ footer p {
 	 animation: example1 15s linear infinite;
 }
 
+
+/* Busca */
+#alinha-busca{
+	position: relative;
+	left: 10px;
+}
 
 /* Move it (define the animation) */
 @-moz-keyframes example1 {
