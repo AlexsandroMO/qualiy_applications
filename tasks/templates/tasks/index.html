@@ -3,14 +3,14 @@
 {% block content %}
 
 
-
-
 <table id="tabela">
     <div class="col-2 add-div"></div>
     <ul class="task-list">
         {% for task in tasks %}
         <spam>{{task.id}}</spam>
         <spam>{{task.inspection_name}}</spam>
+        <spam><a href="{{task.link_path_pdf}}" target="_blank">{{task.link_path_pdf}}</a></spam>
+        
         <br>
         <!-- <spam><i class="fas fa-edit"></i></spam> -->
         {% endfor %}
@@ -21,7 +21,11 @@
 	<table id="tabela">
         {% for task in tasks %}
 		<tr>
+
 		<td align="center"><div id="passar_mouse">	<a href="W:\DIN\GD\INT\02_INTERNO\HOME_PAGE\IMZ_HOME\Modelo-Templates\	I08.pdf" target="_blank" id="alinha-a">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></td>
+
+		<td align="center"><div id="passar_mouse">	<a href="{{task.link_path_pdf}}" target="_blank" id="alinha-a">{{task.inspection_name}}</a><div id="mostrar"><b>{{task.description}}</b></div></div></td>
+
         </tr>
         {% endfor %}
 	</table>

@@ -114,6 +114,10 @@ input{
 	height: auto;
 }
 
+.task-lis{
+	text-decoration: none;
+}
+
 #var-text{
     width: 200px;
 }
