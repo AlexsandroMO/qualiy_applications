@@ -15,6 +15,15 @@ from django.test import TestCase
 
 #pip3 install django-crispy-forms
 
+#Em settings lá em baixo do STAIC_URL colocar:
+#CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+#No tempalte
+# {% load crispy_forms_tags %}
+# {{ form|crispy }}
+
+
+
 #Zerar senha do admin
 #python manage.py shell
 #from django.contrib.auth.models import User

@@ -10,6 +10,14 @@
 /* } */
 
 
+
+div.container {
+	height: 100%;
+	background: -webkit-linear-gradient(top, #088fad 20%, #00d5ff 100%);
+}
+
+
+
 /*#test{position:absolute;top:100;}*/
 #header-div{
 	border: 0;
@@ -57,7 +65,6 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
 
 h2{
 	border: 0;
@@ -202,53 +209,13 @@ input{
 
 #passar_mouse:hover #mostrar{
 	font-size: 15px;
-	color: white;
+	color: #ccc;
 	display:block;
 	position: absolute;
-	top: -180px;
-	left: 580px;
+	top: 75px;
+	left: 40%;
   }
   
-#tabela{
-	position: relative;
-	left: 40px;
-	padding: 3px 0;
-    border:1px #696969 solid;
-	
-}
-
-#alinha-a{
-    position: relative; /* Para que a imagem não saia fora do link */
-    display: block;
-    width: 180px;
-    padding: 5px 0;
-    border:1px #1C1C1C solid;
-    background-color: #4F4F4F;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-#alinha-b{
-    position: relative; /* Para que a imagem não saia fora do link */
-    display: block;
-    width: 180px;
-    padding: 5px 0;
-    border:1px #1C1C1C solid;
-    background-color: #808080;
-    text-decoration: none;
-    color: #ffffff;
-}
- 
-#alinha-c{
-    position: relative; /* Para que a imagem não saia fora do link */
-    display: block;
-    width: 150px;
-    padding: 3px 0;
-    border:1px #2F4F4F solid;
-    background-color: #A9A9A9;
-    text-decoration: none;
-    color: #000000;
-}
 
 .fade{
     opacity:1;
@@ -258,6 +225,149 @@ input{
     opacity:0.5;
 }
 
+
+
+
+.fas.fa-trash{
+	cursor: pointer;
+
+}
+
+
+
+/*Tabelas*/
+table, th, td {
+	border: 1px solid black;
+/* 	font-family: arial, sans-serif; */
+	border-collapse: collapse;
+  }
+
+td, th {
+	border: 1px solid #dddddd;
+	padding: 8px;
+  }
+
+
+#alinha-text{
+	text-align: left;
+}
+
+#alinha-text2{
+	text-align: center;
+}
+
+#alinha-text3{
+	text-align: center;
+	width: 20px;
+}
+
+
+/*
+#alinha-tr-temp{
+	width: 5%;
+	font-size: 1.3vw;
+	display: inline-block;
+	text-align: center;
+	min-width: 15vw;
+	border: 1px solid
+
+}
+
+
+table, td, th {
+	border: solid 1px;
+	border-collapse: collapse;
+	padding: 3px 0;
+	overflow: auto;
+}
+thead, tbody {
+	display: block;
+	width: 1350px;
+	width: auto;
+	text-align: center;
+}
+tbody {
+	height: 480px;
+	overflow-y: auto;
+	text-align: center;
+} */
+
+
+
+/*Tabelas alinhamentos*/
+/* #tabela{
+	position: relative;
+	left: 40px;
+
+}
+
+#alinha-a{
+    position: relative;
+    display: block;
+    width: 80px;
+    background-color: #A9A9A9;
+    color: #ffffff;
+}
+
+#alinha-b{
+    position: relative;
+    display: block;
+    width: 150px;
+    background-color: #A9A9A9;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#alinha-c{
+    position: relative;
+    display: block;
+    width: 800px;
+	background-color: #A9A9A9;
+    text-decoration: none;
+    color: #000000;
+}
+
+#alinha-d{
+    position: relative;
+    display: block;
+    width: 250px;
+	background-color: #A9A9A9;
+    text-decoration: none;
+    color: #000000;
+}
+*/
+
+/* https://pt.stackoverflow.com/questions/175521/alinhamento-de-div-lado-a-lado */
+
+/*
+#alinha-aa{
+    position: relative;
+    display: block;
+    width: 80px;
+
+}
+
+#alinha-bb{
+    position: relative;
+    display: block;
+    width: 150px;
+
+}
+
+#alinha-cc{
+    position: relative;
+    display: block;
+    width: 800px;
+
+}
+
+#alinha-dd{
+    position: relative;
+    display: block;
+    width: 250px;
+
+}
+ */
 
 
 
@@ -277,8 +387,55 @@ footer p {
     top: 40%;
 }
 
-/*--------------------------------------------------------*/
 
+/* Messages*/
+
+ul.messages{
+	padding: 0;
+}
+
+ul.messages li{
+	list-style: none;
+}
+
+
+/* Paginação */
+.paginator{
+	margin-bottom: 20px;
+}
+
+.step-links{
+	padding: 20px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.step-links .current{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+
+/* Localizar */
+
+
+#serach-search{
+	position: absolute;
+	left: -10px
+
+}
+
+#search-btn{
+	position: relative;
+	left: -130px
+
+}
+
+
+
+/*--------------------------------------------------------*/
 /* Animations */
 
 .example1 {
@@ -306,6 +463,12 @@ footer p {
 	 animation: example1 15s linear infinite;
 }
 
+
+/* Busca */
+#alinha-busca{
+	position: relative;
+	left: 10px;
+}
 
 /* Move it (define the animation) */
 @-moz-keyframes example1 {

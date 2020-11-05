@@ -1,27 +1,19 @@
-
-
 {% extends 'base.html' %}
-{% block title %}Página Inicial Qualidade{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block title %}Adicionar Templates{% endblock %}
 {% block content %}
-
-
 
 <div cass="ofset-1 col-4 list-div">
     <h1>Adcionar</h1>
     <form method="POST">
         {% csrf_token %}
-        {{form.as_p}}
+        {{ form|crispy }}
+        <!-- {{form.as_p}} -->
         <input type="submit" class="btn btn-sucess" value="Criar Tarefa">
     </form>
 
 </div>
-
-<a href="">
-    <div class="col-2 add-div">
-        <i class="fas fa-plus"></i> Adicionar item
-    </div>
-</a>
-
 
 
 {% endblock %}

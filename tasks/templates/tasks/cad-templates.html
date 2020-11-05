@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Carga de Templates{% endblock %}
+{% block content %}
+
+<!-- <div cass="ofset-1 col-4 list-div">
+    <h1>Carga Template</h1>
+    <input type="submit" class="btn btn-sucess" id="bt-2" value="Criar Tarefa">
+</div> -->
+<div cass="ofset-1 col-4 list-div">
+    <h1>Carga Template</h1>
+    <form action="." method="get">
+        <a><input name="criatemplate" type="submit" class="btn btn-sucess" id="bt-2" value="Cadastra Templates" onclick="MessageCriaTemplate()"></a>   <!-- Colocar uma mensagem javascrit aqui pra não cadastrar sem perguntar -->
+    </form>
+</div>
+
+{% endblock %}
