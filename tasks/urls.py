@@ -10,5 +10,5 @@ urlpatterns = [
     path('edit/<int:id>', views.editview, name='edit-view'),
     path('delete/<int:id>', views.deleteview, name='delite-view'),
     path('cadtemplate/', views.cadtempview, name='cadtemp-view'),
-    path('entryvalue/<str:name>', views.entryvalue, name='entry-value'),
+    #path('entryvalue/<str:name>', views.entryvalue, name='entry-value'),
 ]

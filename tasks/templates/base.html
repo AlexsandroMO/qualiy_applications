@@ -35,37 +35,34 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
-
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ferramentas de Apoio Técnico</a>
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apoio Técnico</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" href="/">Home</a>
             <a class="dropdown-item" href="/newtask/">New Task</a>
             <a class="dropdown-item" href="task/1">teste task</a>
-      <a class="dropdown-item" href="/admin" target="_blank">ADMIN</a>
-      <a class="dropdown-item" href="cadtemplate" target="_blank">Cadastro Templates</a>
-      <a class="dropdown-item" href="http://epm.icnavais.net/%40DOC_GERAL_INT" target="_blank">Iniciar Caderno Para Elaboração</a>
-      
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="W:\DIN\GD\02_COMPARTILHADO\3D_MOCKUP\Batch33">3D_MockUP</a>
-      </div>
-      </li>
-      
-     <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentação IMZ</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="documentacao.html" >Planilhas de Apoio Técnico</a>
-            <a class="dropdown-item" href="template.html" >Modelos de Templates</a>
-      
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="apoio.html">Documentos de Apoio Técnico</a>
-      </div>
-      </li>
-      
+            {% if user.is_authenticated %}
+              <a class="dropdown-item" href="/admin" target="_blank">ADMIN</a>
+            {% else %}
+              <a class="dropdown-item" href="accounts/login">Login</a>
+            {% endif %}
           </div>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentação</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" href="#">DOCs</a>
+            {% if user.is_authenticated %}
+              <a class="dropdown-item" href="cadtemplate">Cadastro Templates</a>
+              <a class="dropdown-item" href="accounts/logout" >Logout</a>
+            {% else %}
+              <a class="dropdown-item" href="accounts/login">Login</a>
+            {% endif %}
+          </div>
+        </li>
+   
       </ul>
-    
+      
       <div class="col-2 search-div">
         <form method="GET" id="search-form">  <!-- <form class="form-inline my-2 my-lg-0" id="alinha-busca"></form>   id="alinha-busca"  -->
           <input class="form-control mr-sm-2" type="text" name="search" placeholder="Pesquisa" aria-label="Search" id="serach-search" value="{{ request.GET.search }}">

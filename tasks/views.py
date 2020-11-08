@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.http import HttpResponse
 from .forms import TaskForm
@@ -10,10 +11,12 @@ import db_read_update as temp_up
 def hello(request):
     return HttpResponse('hello!')
 
+#@login_required
 def index(request):
     tasks = Task.objects.all().order_by('inspection_name')
     return render(request, 'tasks/index.html', {'tasks': tasks})
 
+@login_required
 def template_list(request):
 
     search = request.GET.get('search')
@@ -29,20 +32,20 @@ def template_list(request):
 
     return render(request, 'tasks/template-list.html', {'tasks': tasks})
 
-def entryvalue(request, name):
+""" def entryvalue(request, name):
     tasks = Task.objects.all().order_by('inspection_name')
     return render(request, 'tasks/entryvalue.html', {'name':name, 'tasks': tasks})
 
 
 def entryvalue(request, name):
-    return render(request, 'tasks/entryvalue.html', {'name':name})
+    return render(request, 'tasks/entryvalue.html', {'name':name}) """
 
-
+@login_required
 def taskview(request, id):
     task = get_object_or_404(Task, pk=id)
     return render(request, 'tasks/task.html', {'task':task})
 
-
+@login_required
 def newtask(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
@@ -57,7 +60,7 @@ def newtask(request):
         form = TaskForm()
         return render(request, 'tasks/add-task.html', {'form': form})
 
-
+@login_required
 def editview(request, id):
     task = get_object_or_404(Task, pk=id)
     form = TaskForm(instance=task)
@@ -73,7 +76,7 @@ def editview(request, id):
     else:
         return render(request, 'tasks/edit-task.html', {'form': form, 'task': task})
 
-
+@login_required
 def deleteview(request, id):
     task = get_object_or_404(Task, pk=id)
     task.delete()
@@ -82,11 +85,11 @@ def deleteview(request, id):
 
     return redirect('/')
 
-
+""" @login_required
 def cadtempview(request):
-    return render(request, 'tasks/cad-templates.html')
+    return render(request, 'tasks/cad-templates.html') """
 
-
+@login_required
 def cadtempview(request):
     if request.GET.get('criatemplate'):
         print('entrou')
