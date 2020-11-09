@@ -11,9 +11,11 @@ div.container {
 }
 
 .container-fluid{
-	padding: 10px;
-	width: auto;
-	height: auto;
+	padding: o;
+}
+
+.container-fluid .row{
+	margin: o;
 }
 
 .task-lis{
@@ -31,9 +33,7 @@ div.container {
 	font-size: 15px;
 	color: #ccc;
 	display:block;
-	position: absolute;
-	top: 75px;
-	left: 40%;
+	width: 100%;	
 }
 /*Aproxima mouse capa-sub*/
 .fade{
