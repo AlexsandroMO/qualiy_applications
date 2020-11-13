@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 from django.http import HttpResponse
 from .forms import TaskForm
 from django.contrib import messages
-from .models import Task
+from .models import Tasks
 
 import db_read_update as temp_up
 
